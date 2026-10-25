@@ -795,3 +795,48 @@ nav a {
     color: var(--ink);
     font-weight: 700
 }
+/* PIXORA 2026: social media service and responsive improvements */
+.services { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.service { display:flex; flex-direction:column; }
+.service-featured { border-color:#bad8ff; background:linear-gradient(145deg,#fff,#eef6ff); }
+.service-link { margin-top:auto; padding-top:18px; font-size:13px; font-weight:800; color:var(--blue); }
+.social-section { background:#fff; }
+.social-layout { display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; }
+.social-showcase { min-height:445px; border-radius:24px; padding:35px; background:linear-gradient(135deg,#dfeeff,#eef5ff 65%,#f9e8db); display:flex; align-items:center; justify-content:center; gap:18px; overflow:hidden; }
+.social-preview { border-radius:17px; overflow:hidden; background:#fff; box-shadow:0 18px 45px #14233422; }
+.social-preview-main { width:58%; transform:rotate(-5deg); }
+.social-preview-side { width:38%; transform:rotate(7deg) translateY(35px); }
+.preview-art { aspect-ratio:4/5; background:linear-gradient(140deg,#12243b,#2468c9 70%,#38c2e9); display:flex; align-items:center; padding:20px; color:#fff; font:700 clamp(18px,2.4vw,36px)/1.12 'Space Grotesk',sans-serif; position:relative; overflow:hidden; }
+.preview-orbit { position:absolute; width:135px; height:135px; border:24px solid #f58a27; border-radius:50%; right:-48px; bottom:-40px; }
+.preview-shape { aspect-ratio:4/5; display:grid; place-items:center; background:linear-gradient(140deg,#ffdbad,#f58a27); color:white; font-size:clamp(70px,10vw,150px); }
+.preview-caption { padding:14px 16px 18px; }
+.preview-caption span { display:block; font-size:10px; color:var(--blue); text-transform:uppercase; letter-spacing:1px; font-weight:800; margin-bottom:6px; }
+.preview-caption b { font-size:13px; line-height:1.35; display:block; }
+.social-copy h3 { font:700 clamp(32px,3.6vw,46px)/1.08 'Space Grotesk',sans-serif; letter-spacing:-1.8px; margin:16px 0; }
+.social-copy p { color:var(--muted); line-height:1.65; }
+.social-benefits { list-style:none; padding:0; margin:22px 0; }
+.social-benefits li { padding:10px 0 10px 27px; border-bottom:1px solid var(--line); position:relative; font-size:14px; font-weight:600; }
+.social-benefits li:before { content:'✓'; position:absolute; left:0; color:var(--blue); font-weight:800; }
+.social-note { font-size:12px; }
+.qr-real { display:flex; align-items:center; justify-content:center; padding:4px; }
+.qr-real img { display:block; width:100%; height:100%; }
+@media (max-width:980px) {
+ .mobile-menu { display:inline-flex; }
+ header { position:relative; }
+ #main-nav { display:none; position:absolute; z-index:20; top:calc(100% - 1px); left:0; right:0; padding:16px 20px; background:#fff; border:1px solid var(--line); border-radius:0 0 12px 12px; box-shadow:0 18px 25px #12243b1a; flex-direction:column; gap:0; }
+ #main-nav.open { display:flex; }
+ #main-nav a { padding:12px 8px; }
+ .social-layout { grid-template-columns:1fr; gap:30px; }
+ .services { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:650px) {
+ header > .cta { display:none; }
+ .services { grid-template-columns:1fr; }
+ .social-showcase { min-height:300px; padding:20px; }
+ .social-preview-main { width:58%; }
+ .social-preview-side { width:38%; }
+ .preview-art { font-size:clamp(18px,5vw,30px); }
+ .preview-caption { padding:10px; }
+ .preview-caption b { font-size:11px; }
+ .social-copy h3 { font-size:34px; }
+}
